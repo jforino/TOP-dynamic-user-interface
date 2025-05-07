@@ -13,6 +13,31 @@
 }
 
 .images img {
-    height: 300px;
-    width: 500px;
+    height: 250px;
+    width: 400px;
+    position: absolute;
+}
+
+.nav-arrows {
+    width: 60px;
+    height: 60px;
+}
+
+#images {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    border: 5px solid rgb(184, 162, 162);
+}
+
+#left-arrow {
+    transform: rotate(180deg);
+}
+
+#image-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap : 20px;
 }
