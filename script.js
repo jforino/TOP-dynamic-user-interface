@@ -45,9 +45,7 @@ dropDownToggleButton.addEventListener('click', () => {
     if(dropDownContent.classList.contains('hidden')){
         dropDownContent.classList.remove('hidden'); 
     }
-    else{
-        dropDownContent.classList.add('hidden');
-    }
+   
 })
 
 
