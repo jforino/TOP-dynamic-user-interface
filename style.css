@@ -7,6 +7,10 @@
     color: black;
 }
 
+#drop-down-toggle-button {
+    cursor: pointer;
+}
+
 .drop-down-content-item{
     list-style: none;
     font-size: 1.2em;
@@ -21,6 +25,8 @@
 .nav-arrows {
     width: 60px;
     height: 60px;
+    cursor: pointer;
+    
 }
 
 #images {
@@ -40,4 +46,24 @@
     justify-content: center;
     height: 50vh;
     gap : 20px;
+}
+
+.nav-circles div {
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+.nav-circles {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected {
+    border: 2px rgb(66, 66, 0) solid;
+    box-sizing: border-box;
 }
