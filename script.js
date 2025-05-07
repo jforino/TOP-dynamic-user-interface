@@ -22,6 +22,8 @@ const circleToPictureObject = {
     'circle-4' : 3,
 }
 
+// ADD TIMER TO SWITCH PICS AUTOMATICALLY
+
 const navCirclesDivArray = Array.from(navCirclesDiv.children); 
 
 navCirclesDivArray.forEach(element => {
@@ -74,7 +76,7 @@ rightArrow.addEventListener('click', () => {
         currentNavCircleCount += 1; 
         console.log(currentPictureCount); 
     }
-    else if (currentPictureCount = 3){
+    else if (currentPictureCount == 3){
         currentPictureCount = 0;
         currentNavCircleCount = 0;
         console.log(currentPictureCount); 
