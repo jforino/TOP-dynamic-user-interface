@@ -26,9 +26,19 @@ const navCirclesDivArray = Array.from(navCirclesDiv.children);
 
 navCirclesDivArray.forEach(element => {
     element.addEventListener('click', () => {
-        switch(element.id)
+        currentNavCircleCount = circleToPictureObject[element.id];
+        currentPictureCount = circleToPictureObject[element.id]; 
 
-        console.log(element.id);
+        currentPictureShowing.classList.add('hidden');
+        currentNavCircleHighlighted.classList.remove('selected'); 
+
+        currentNavCircleHighlighted = navCirclesDiv.children[currentNavCircleCount];
+        currentNavCircleHighlighted.classList.add('selected');
+        
+        currentPictureShowing = imagesDiv.children[currentPictureCount]
+        currentPictureShowing.classList.remove('hidden'); 
+
+        console.log(circleToPictureObject[element.id]); 
     })
 })
 
