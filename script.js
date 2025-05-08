@@ -22,29 +22,8 @@ const circleToPictureObject = {
     'circle-4' : 3,
 }
 
-// ADD TIMER TO SWITCH PICS AUTOMATICALLY
-
-
-// function incrementCounterWithLimit(){
-//     if (currentNavCircleCount == 3 || currentPictureCount == 3){
-//         currentNavCircleCount = 0; 
-//         currentPictureCount = 0;
-//     }
-//     while (currentNavCircleCount < 3){
-//         setInterval(() => {
-//             currentNavCircleCount += 1;
-//             currentPictureCount += 1; 
-//             console.log(currentNavCircleCount, currentPictureCount); 
-//         }, 5000)
-
-//     }
-// }
-
 
 function automaticallyAdvanceSlideshow(){
-
-    
-
     currentPictureShowing.classList.add('hidden');
     currentNavCircleHighlighted.classList.remove('selected'); 
 
@@ -54,11 +33,25 @@ function automaticallyAdvanceSlideshow(){
     
     currentPictureShowing = imagesDiv.children[currentPictureCount]
     currentPictureShowing.classList.remove('hidden'); 
-
-    console.log(currentPictureCount, currentNavCircleCount); 
+   
 };
 
-setInterval(automaticallyAdvanceSlideshow, 5000); 
+function incrementCounterWithLimit(){
+    setInterval(() =>{
+        if( currentNavCircleCount < 3 && currentPictureCount < 3){
+            currentNavCircleCount += 1;
+            currentPictureCount += 1;    
+        }
+        else if ( currentNavCircleCount == 3 || currentPictureCount == 3){
+            currentNavCircleCount = 0;
+            currentPictureCount = 0;
+        }
+        
+        automaticallyAdvanceSlideshow();
+    }, 5000)
+}
+
+incrementCounterWithLimit();
 
 
 const navCirclesDivArray = Array.from(navCirclesDiv.children); 
